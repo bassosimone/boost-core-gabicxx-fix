@@ -1,10 +1,10 @@
 # Fix boost/core to compile with gabi++
 
+Minimal test case for testing my fix to allow [boost/core](https://github.com/boostorg/core) to compile with [gabi++](https://android.googlesource.com/platform/ndk/+/master/sources/cxx-stl/gabi++/). The problem which prevents boost from compiling is that when targeting libc++ for some architectures (mips, mips64, x86, x86\_64) Android NDK uses gabi++ as C++ abi rather than libc++abi. Unfortunately, gabi++ lacks support for `abi::__cxa_demangle()` therefore `boost/core/demangle.hpp` does not compile.
+
 To start off, you need to recursively clone this repository:
 
     git clone --recursive https://github.com/bassosimone/boost-core-gabicxx-fix
-
-Minimal test case for testing my fix to allow [boost/core](https://github.com/boostorg/core) to compile with [gabi++](https://android.googlesource.com/platform/ndk/+/master/sources/cxx-stl/gabi++/).
 
 To compile, you need to [install Android NDK first](https://developer.android.com/tools/sdk/ndk/index.html). This bug and the related fix was tested using both version 10d and version 10e of the Android NDK. To install the latest NDK as of this writing (i.e., 10e), you can do the following:
 
