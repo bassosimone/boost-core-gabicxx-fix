@@ -6,7 +6,15 @@ To start off, you need to recursively clone this repository:
 
 Minimal test case for testing my fix to allow [boost/core](https://github.com/boostorg/core) to compile with [gabi++](https://android.googlesource.com/platform/ndk/+/master/sources/cxx-stl/gabi++/).
 
-To compile, you need to [install Android NDK first](https://developer.android.com/tools/sdk/ndk/index.html). This bug and the related fix was tested using both version 10d and version 10e of the Android NDK.
+To compile, you need to [install Android NDK first](https://developer.android.com/tools/sdk/ndk/index.html). This bug and the related fix was tested using both version 10d and version 10e of the Android NDK. To install the latest NDK as of this writing (i.e., 10e), you can do the following:
+
+    $ cd $HOME
+    $ mkdir Android
+    $ cd Android
+    $ wget https://dl.google.com/android/ndk/android-ndk-r10e-linux-x86_64.bin
+       ... check the checksum ...
+    $ chmod +x android-ndk-r10e-linux-x86_64.bin
+    $ ./android-ndk-r10e-linux-x86_64.bin
 
 Then, to check that everything works you just need to invoke `ndk-build`. In fact, the version of `boost/core` included as a submodule points to the [fix/demangle-with-gabicxx](https://github.com/bassosimone/libight-boost-core/tree/fix/demangle-with-gabicxx) branch that contains [the fix](https://github.com/bassosimone/libight-boost-core/commit/574d96f61af1c06dd087340c256c74fc2899ce88). This is what I get on my Ubuntu 15.04 machine with NDK v10e:
 
