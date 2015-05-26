@@ -1,0 +1,3 @@
+[submodule "boost_core"]
+	path = boost_core
+	url = git@github.com:bassosimone/libight-boost-core
