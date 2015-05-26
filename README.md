@@ -6,7 +6,7 @@ To start off, you need to recursively clone this repository:
 
     git clone --recursive https://github.com/bassosimone/boost-core-gabicxx-fix
 
-To compile, you need to [install Android NDK first](https://developer.android.com/tools/sdk/ndk/index.html). This bug and the related fix was tested using both version 10d and version 10e of the Android NDK. To install the latest NDK as of this writing (i.e., 10e), you can do the following:
+To compile, you need to [install Android NDK first](https://developer.android.com/tools/sdk/ndk/index.html). To install the latest NDK as of this writing (i.e., 10e), you can do the following:
 
     $ cd $HOME
     $ mkdir Android
