@@ -4,7 +4,7 @@ Minimal test case for testing my fix to allow [boost/core](https://github.com/bo
 
 To compile, you need to [install Android NDK first](https://developer.android.com/tools/sdk/ndk/index.html). This bug and the related fix was tested using both version 10d and version 10e of the Android NDK.
 
-Then, to check that everything works you just need to invoke `ndk-build`. In fact, the version of `boost/core` included by default points to the [fix/demangle-with-gabixx](https://github.com/bassosimone/libight-boost-core/tree/fix/demangle-with-gabixx) branch that contains the fix. This is what I get on my Ubuntu 15.04 machine with NDK v10e:
+Then, to check that everything works you just need to invoke `ndk-build`. In fact, the version of `boost/core` included by default points to the [fix/demangle-with-gabicxx](https://github.com/bassosimone/libight-boost-core/tree/fix/demangle-with-gabicxx) branch that contains the fix. This is what I get on my Ubuntu 15.04 machine with NDK v10e:
 
     $ rm -rf obj/*  # Start over
     $ ~/Android/android-ndk-r10e/ndk-build -k
